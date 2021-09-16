@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>
+			Kuro Anime - High Quality Anime Online
+		</title>
+		<link rel="icon" href="./images/kuro_logo.ico">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<br>
+		<table width="50%" align="center">
+			<tr>
+				<td align="center">
+					<img src="./images/kuro_anime_logo.png" alt="kuro anime logo" width="374" height="104" align="top">
+				</td>
+			</tr>
+		</table>
+		<br><br><br>
+		<table width="50%" align="center" bgcolor="#191919">
+			<tr>
+				<td height="30">
+					<p20>&nbsp;&nbsp;Please register here:</p20>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<p13>&nbsp;&nbsp;Registration failed: Data not inserted</p13>
+				</td>
+			</tr>
+			<tr>
+			<td>
+			<table>
+			<tr valign="top">
+			<td width="300" align="right">
+			<p20>Username: <br><br>
+			Email: <br><br>
+			Password: <br><br>
+			Retype your password: <br><br></p20>
+			</td>
+			<td>
+			<p20>
+			<form action="register.php" method="post">
+			&nbsp;<input type="text" name="username" required><br><br>
+			&nbsp;<input type="email" name="email" required><br><br>
+			&nbsp;<input type="password" name="psw" id="password" required><br><br>
+			&nbsp;<input type="password" name="rt_psw" id="confirm_password" required><br><br>
+			&nbsp;<input type="submit" name="register" value="REGISTER">
+			</form>
+			</p20>
+			<script>
+			var password = document.getElementById("password") , confirm_password = document.getElementById("confirm_password");
+			function validatePassword()
+			{
+			if(password.value != confirm_password.value)
+			{
+			confirm_password.setCustomValidity("Passwords Don't Match");
+			}
+			else
+			{
+			confirm_password.setCustomValidity('');
+			}
+			}
+			password.onchange = validatePassword;
+			confirm_password.onkeyup = validatePassword;
+			</script>
+			</td>
+			</tr>
+			<tr>
+			<td align="center" colspan="2">
+			<p20>Already have an account:<br>
+			<a href="index.html">Login here</a>.</p20>
+			</td>
+			</tr>
+			</table>
+			</td>
+			</tr>
+		</table>
+	</body>
+</html>
